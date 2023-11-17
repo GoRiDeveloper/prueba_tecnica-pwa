@@ -1,5 +1,5 @@
 import { CartItem } from "./cart_item";
-import { useAppSelector, getCartState } from "../../lib";
+import { useAppSelector, useCart, getCartState } from "../../lib";
 import styles from "./cart.module.css";
 
 /**
@@ -8,16 +8,11 @@ import styles from "./cart.module.css";
  * @returns Carrito de productos.
  */
 export const Cart = () => {
-  // Desestructuramos los estados de la aplicación.
+  // Estado del carrito de productos.
   const cart = useAppSelector(getCartState);
 
-  /**
-   * Cantidad de productos totales.
-   */
-  const totalProducts = cart.reduce(
-    (total, product) => total + product.quantity,
-    0
-  );
+  // Desestructuramos las funcionalidades del hook del carrito de productos.
+  const { totalProducts } = useCart();
 
   return (
     <div className={styles.cart}>
