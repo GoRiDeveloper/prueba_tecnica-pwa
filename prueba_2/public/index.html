@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/public/assets/css/normalize.css">
+        <link rel="stylesheet" href="/public/assets/css/style.css">
+
+        <title> Layout - Prueba 2 </title>
+    </head>
+    <body class="body">
+        <main class="product">
+            <section class="product__images">
+                <div class="carousel">
+                    <div class="carousel__container">
+                        <button class="carousel__previousBtn">
+                            <span class="previousBtn__container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <figure class="carousel__image">
+                            <img src="/public/assets/img/imagen.webp" width="640" alt="producto" class="image">
+                        </figure>
+                        <button class="carousel__nextBtn">
+                            <span class="nextBtn__container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="carousel__buttons">
+                        <button class="carousel__button carousel__button--selected"></button>
+                        <button class="carousel__button"></button>
+                        <button class="carousel__button"></button>
+                        <button class="carousel__button"></button>
+                    </div>
+                </div>
+            </section>
+            <section class="product__heading">
+                <h1 class="title product__title"> Gloria Plazzo Pants </h1>
+                <p class="product__price"> $70.40 </p>
+                <div class="box"></div>
+            </section>
+            <section class="product__options">
+                <div class="option">
+                    <span class="title"> Fashion Color </span>
+                    <div class="option__switch">
+                        <button style="--bg-fashion: #FEE1D2" class="option__button color__button">
+                            <span class="color__check">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="color__checkSvg">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <button style="--bg-fashion: #DCD5E1" class="option__button color__button color__button--selected">
+                            <span class="color__check color__check--selected">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="color__checkSvg">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <button style="--bg-fashion: #D4E3EC" class="option__button color__button">
+                            <span class="color__check">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="color__checkSvg">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <button style="--bg-fashion: #D8F0D8" class="option__button color__button">
+                            <span class="color__check">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="color__checkSvg">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <dl class="color__selection">
+                        <dt class="selection__left"> Selected Fashion Color: </dt>
+                        <dd class="selection__right"> Lilac </dd>
+                    </dl>
+                </div>
+                <div class="option">
+                    <span class="title"> Fashion Size </span>
+                    <div class="option__switch">
+                        <button class="option__button size__button">
+                            <span class="option__check"> L </span>
+                        </button>
+                        <button class="option__button size__button">
+                            <span class="option__check"> XS </span>
+                        </button>
+                        <button class="option__button size__button size__button--selected">
+                            <span class="option__check option__check--selected"> M </span>
+                        </button>
+                        <button class="option__button size__button">
+                            <span class="option__check"> S </span>
+                        </button>
+                    </div>
+                    <dl class="color__selection">
+                        <dt class="selection__left"> Selected Fashion Size: </dt>
+                        <dd class="selection__right"> M </dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="product__quantity">
+                <span class="title"> Quantity </span>
+                <div class="quantity__buttons">
+                    <label class="quantity__label"></label>
+                    <button class="quantity__button">
+                        <span class="quantity__decrement">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="quantity__decrementSvg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </button>
+                    <span class="quantity__count" style="--iconsBefore: 0; --iconsAfter: 0;">
+                        <span class="count__element count__element--first">
+                            <input type="text" class="count__input">
+                        </span>
+                        <span class="count__element count__element--btn count__element--second"></span>
+                        <span class="count__element count__element--btn count__element--third"></span>
+                    </span>
+                    <p class="quantity__message"></p>
+                    <button class="quantity__button">
+                        <span class="quantity__decrement">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </section>
+            <section class="product__actions">
+                <section class="product__addToCart">
+                    <button class="addToCart">
+                        <span class="addToCart__text"> Add to cart </span>
+                    </button>
+                </section>
+                <button class="addToFav">
+                    <span class="addToFav__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </span>
+                    Add to Favorites
+                </button>
+            </section>
+            <section class="product__description">
+                <span class="descriptions__title"> Description </span>
+                <div class="description__container">
+                    <p class="description__p"> The Gloria Palazzo Pants are pretty much the best pants ever. Dress them up or dress them down. Throw them on in lieu of a skirt and feel sweet freedom from the constraints of regular pants. </p>
+                    <p class="description__p"> Features: </p>
+                    <ul class="descriptions__list">
+                        <li> Elastic waistband </li>
+                        <li> Pull on </li>
+                        <li> Sits at the waist </li>
+                        <li> 32" inseam </li>
+                        <li> Machine wash, line dry </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="product__details">
+                <span class="descriptions__title"> Details </span>
+                <div class="description__container">
+                    <ul class="descriptions__list">
+                        <li> <p class="descriptions__bold"> SK </p> VP02 </li>
+                        <li> <p class="descriptions__bold"> Fashion Color </p> Lilac </li>
+                        <li> <p class="descriptions__bold"> Fashion Material </p> Polyester, Spandex </li>
+                        <li> <p class="descriptions__bold"> Fashion Style </p> Wide Leg, Full Length </li>
+                        <li> <p class="descriptions__bold"> Has Video </p> No </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
